@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="MyPokemon" customModuleProvider="target">
+            <connections>
+                <outlet property="catchPokemonBtn" destination="bms-d9-1fG" id="1oK-2a-tKG"/>
+                <outlet property="imageView" destination="Tgn-EU-Slh" id="JNS-nN-wq3"/>
+                <outlet property="pokemonMovesLabel" destination="edS-xa-hpL" id="Z1X-fA-FR2"/>
+                <outlet property="pokemonNameLabel" destination="Fil-yX-Vos" id="b2R-5H-rE8"/>
+                <outlet property="pokemonTypesLabel" destination="sF7-IY-1IZ" id="V79-nQ-qRV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9b5-xh-ut0">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8J-K2-xXM">
+                            <rect key="frame" x="23" y="341" width="334" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="XDe-AB-DGF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bms-d9-1fG">
+                            <rect key="frame" x="39" y="789" width="323" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="2oV-Gu-Iqa"/>
+                                <constraint firstAttribute="width" constant="323" id="WNO-7V-qx5"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Catch Pokemon"/>
+                            <connections>
+                                <action selector="catchPokemon:" destination="-1" eventType="touchUpInside" id="5T7-sl-EiQ"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tgn-EU-Slh">
+                            <rect key="frame" x="12" y="53" width="369" height="280"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="280" id="TBw-6b-FEK"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERQEREQ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fil-yX-Vos">
+                            <rect key="frame" x="39" y="382" width="318" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="8Vy-tn-R43"/>
+                                <constraint firstAttribute="width" constant="318" id="ikI-Tq-PxV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-75-3LH">
+                            <rect key="frame" x="23" y="667" width="334" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="334" id="3kw-Li-beS"/>
+                                <constraint firstAttribute="height" constant="32" id="D7c-Lk-JmE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLt-E4-OSa">
+                            <rect key="frame" x="23" y="430" width="334" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="aEs-ax-jcS"/>
+                                <constraint firstAttribute="width" constant="334" id="bBt-1h-lCz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edS-xa-hpL">
+                            <rect key="frame" x="39" y="471" width="318" height="187"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="318" id="94Z-cM-YCh"/>
+                                <constraint firstAttribute="height" constant="187" id="vbZ-6b-6pJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF7-IY-1IZ">
+                            <rect key="frame" x="31" y="707" width="318" height="101"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="318" id="uXa-jv-5N4"/>
+                                <constraint firstAttribute="height" constant="101" id="uYh-UF-zp1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="edS-xa-hpL" firstAttribute="leading" secondItem="Seg-75-3LH" secondAttribute="trailing" constant="-318" id="0st-OD-mLe"/>
+                        <constraint firstItem="Fil-yX-Vos" firstAttribute="leading" secondItem="HLt-E4-OSa" secondAttribute="trailing" constant="-318" id="6Zs-sZ-ZVb"/>
+                        <constraint firstItem="edS-xa-hpL" firstAttribute="leading" secondItem="9b5-xh-ut0" secondAttribute="leading" constant="39" id="A0p-zJ-MB0"/>
+                        <constraint firstAttribute="bottom" secondItem="bms-d9-1fG" secondAttribute="bottom" constant="28" id="AN9-OM-GUM"/>
+                        <constraint firstItem="S8J-K2-xXM" firstAttribute="top" secondItem="Tgn-EU-Slh" secondAttribute="bottom" constant="8" symbolic="YES" id="CZC-xc-Ugs"/>
+                        <constraint firstItem="edS-xa-hpL" firstAttribute="top" secondItem="HLt-E4-OSa" secondAttribute="bottom" constant="9" id="G6p-ug-d80"/>
+                        <constraint firstAttribute="trailing" secondItem="bms-d9-1fG" secondAttribute="trailing" constant="31" id="I40-R5-qvX"/>
+                        <constraint firstItem="Tgn-EU-Slh" firstAttribute="top" secondItem="9b5-xh-ut0" secondAttribute="top" constant="53" id="Lz7-Q1-nhB"/>
+                        <constraint firstAttribute="trailing" secondItem="edS-xa-hpL" secondAttribute="trailing" constant="36" id="U0I-iY-B6A"/>
+                        <constraint firstItem="bms-d9-1fG" firstAttribute="leading" secondItem="9b5-xh-ut0" secondAttribute="leading" constant="39" id="Ze9-RG-aIU"/>
+                        <constraint firstItem="Fil-yX-Vos" firstAttribute="top" secondItem="S8J-K2-xXM" secondAttribute="bottom" constant="9" id="Zk6-ga-ld3"/>
+                        <constraint firstItem="sF7-IY-1IZ" firstAttribute="leading" secondItem="Seg-75-3LH" secondAttribute="trailing" constant="-326" id="cUU-gI-Zf6"/>
+                        <constraint firstItem="Seg-75-3LH" firstAttribute="top" secondItem="edS-xa-hpL" secondAttribute="bottom" constant="9" id="eo3-sq-Keq"/>
+                        <constraint firstAttribute="trailing" secondItem="Tgn-EU-Slh" secondAttribute="trailing" constant="12" id="qTj-1x-vBE"/>
+                        <constraint firstItem="HLt-E4-OSa" firstAttribute="top" secondItem="Fil-yX-Vos" secondAttribute="bottom" constant="15" id="qzl-vp-Gjz"/>
+                        <constraint firstAttribute="trailing" secondItem="S8J-K2-xXM" secondAttribute="trailing" constant="36" id="ri6-fL-UQO"/>
+                        <constraint firstItem="Fil-yX-Vos" firstAttribute="leading" secondItem="S8J-K2-xXM" secondAttribute="trailing" constant="-318" id="tzP-G0-haf"/>
+                        <constraint firstItem="Tgn-EU-Slh" firstAttribute="leading" secondItem="9b5-xh-ut0" secondAttribute="leading" constant="12" id="u4Y-j2-YzX"/>
+                        <constraint firstItem="S8J-K2-xXM" firstAttribute="leading" secondItem="9b5-xh-ut0" secondAttribute="leading" constant="23" id="vJr-Mf-2ch"/>
+                        <constraint firstItem="edS-xa-hpL" firstAttribute="leading" secondItem="HLt-E4-OSa" secondAttribute="trailing" constant="-318" id="xGm-aO-LWi"/>
+                        <constraint firstItem="sF7-IY-1IZ" firstAttribute="top" secondItem="Seg-75-3LH" secondAttribute="bottom" constant="8" symbolic="YES" id="yPq-Vv-S0c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="9b5-xh-ut0" secondAttribute="top" constant="59" id="4hO-Kq-W0q"/>
+                <constraint firstItem="9b5-xh-ut0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jfh-B6-sRr"/>
+                <constraint firstItem="9b5-xh-ut0" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="Uhw-9u-goy"/>
+                <constraint firstItem="9b5-xh-ut0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ccz-Fi-4g5"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:latest
+    volumes:
+      - "./.mysql-data/db:/var/lib/mysql"
+    container_name: db
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+  go:
+    container_name: go
+    build:
+      context: .
+    depends_on:
+      - db # condition: service_healthy # waiting until heathcheck of postgres is good
+    ports:
+      - "3000:3000"
+
+volumes:
+  dbdata: # persist database
